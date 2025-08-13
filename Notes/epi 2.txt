@@ -1,1 +1,30 @@
-- Package.json() is a configuration file for npm  
+This episode mainly covers how is our app fast 
+its just not react also bundlers and stuff
+
+
+- Package.json() is a configuration  for npm  
+
+-package aka dependencies 
+
+-there 2 types of dependencies 
+1.Dev dependencies
+2. Normal dependencies
+
+1.Dev - it is generally required in development phase 
+
+2. Normal - used in production also 
+
+imp interview Question 
+^ or ~ and why in package.json() ???? 
+
+diff between package.json() and package-lock.json() - keeps track of version updated 
+
+- when we did npm install parcel why did the other node modules came ??? they came because as we have dependency on parcel for our project and now parcel as project have dependencies on other projects and the other projects have dependencies on other projects 
+= this is know as transitive dependencies
+
+if we have package.json() and package-lock.json() we can recreate our node modules 
+
+just like npm we have npx 
+npx means execute a package
+
+cdn links are not a good way to use react in our apps 
