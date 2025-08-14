@@ -1,2 +1,129 @@
 React Element is nothing but Object 
 but when we render it to DOM it becomes Html Element
+
+React devs developed a good way than React.createElement 
+THE JSX !!
+
+JSX is not Part of React 
+we can Write React without JSX 
+but it is just easy with JSX 
+
+=> What is JSX ?? 
+  => JSX is not HTML in JS 
+     it is JSX it is diff than HTML 
+     JSX is HTML like Syntax in Js 
+
+JSX is just syntax the Element we create with it is React Element 
+which is ultimately a object but later when rendered on DOM it becomes html element
+
+=> is JSX valid JS ?? 
+it is not JS but also JS 
+JS engine cannot understand JSX 
+JS Engine understand ES6 (ECMASCRIPT)
+Browser Wont understand JSX syntax ! 
+if JS engines cant read JSX 
+how does JSX works 
+PARCEL DOES ITS THING !!!
+The code is Transpiled by Parcel before it is sent to Browser/JS engine
+Transpiled => converted to code that JS engine / browser can understand 
+Also Parcel itself is not doing it 
+it manages various other things 
+one of them who transpiles our code is BABEL ! 
+BABEL is a Package that transpile our code so the ReactDOM can understand ! 
+
+in the Core of the React the way we create new element is 
+
+React.createElement => react element-JS object=> HTML element(rendered)
+
+now in the new JSX syntax: 
+JSX => React.createElement => react element-JS object=> HTML element(rendered)
+
+BABEL also does transpilation of new ES6 code into older code for older browser
+
+if I have to give Attributes to JSX i have to give it in camelCase 
+ex: 1) ClassName = "" 
+    2) tabIndex = ""
+
+JSX =>Babel transpiles it to React.createElement => react element-JS object=> HTML element(rendered)
+
+
+=> REACT COMPONENTS: 
+   everything in our web page is components like header , footer , button, navigation bar ,etc.
+  Two Type of COMPONENTS:
+  1) class Based components :- old way of wrting code 
+  2) Functional components:- new way of writing code
+
+REACT FUNCTIONAL COMPONENTS:
+just a normal js function.
+ when creating component first alphabet should be capital 
+ const Heading = //component
+
+function returning some piece of JSX code / React element is called as Functional component
+
+if you want to write a react element in multi line have to wrap it inside (...)
+ex:- const heading = (
+  <h1 ClassName="abc" tabIndex="1">
+    Abhijeet
+  </h1>
+)
+
+react components when rendering via root are passed to render method as 
+<ReactComponentBeRendered />
+
+if want to use component in another component you just write:
+<ReactComponent />
+using one component in another is also known as component composition 
+
+root.render converts everything to html and then render it 
+
+if you want to execute/or inject js code inside jsx you can do that with using   {} ex: const age = 20
+const heading = (
+  <h1 ClassName="abc" tabIndex="1">
+    {age + 1}
+    Abhijeet
+  </h1>
+)
+
+if you want to use react element inside component you can just do {reactEle} ex:
+const heading = () => (
+  <h1 ClassName="abc" tabIndex="1">
+    {title}
+    Abhijeet
+  </h1>
+)
+
+also same it React element inside React element 
+const heading = (
+  <h1 ClassName="abc" tabIndex="1">
+    {title}
+    Abhijeet
+  </h1>
+)
+title here is react element 
+
+React component can be also used in React element using <Reactcomp />ex; 
+const heading = (
+  <h1 ClassName="abc" tabIndex="1">
+    <Title />
+    Abhijeet
+  </h1>
+)
+Title here is React component
+
+JSX takes care of Cross site Scripting attacks / injection 
+if we call a bad api and it returns some malicious data and if we are using that data inside our jsx 
+JSX escapes that malicious data 
+JSX sanitizes the data 
+When the code in jsx is enclosed in {} the JSX wont blindly run it 
+it sanitizes data
+
+<Title /> can also be written as 
+<Title></Title>
+<Title /> is just a naming convention 
+
+Title is a Functional component 
+if we want it in some other component or element 
+we can also do this 
+{Title()} because at the end of the day functional components are normal javaScript functions that return some piece of JSX code which is again a React Element
+
+JSX is making our code readable 
