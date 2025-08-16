@@ -1,0 +1,28 @@
+if you want to build a app ! 
+1st step Planning !! 
+  done !! 
+
+Props !! 
+Short for properties when we want to dynamically pass data to component we can pass it as props !
+
+Props are just normal arguments to our function 
+
+passing a prop to a function is just like 
+passing a argument to our function 
+
+<ResCard
+  resName="Meghana Foods"
+  cuisine="Biryani, North Indian, Asian"
+/>
+in this resName and cuisine are props and process of doing it passing props to a function component
+
+Again PROPS ARE USED WHEN WE WANT TO PASS DATA DYNAMICALLY TO FUNCTIONAL COMPONENTS
+
+!!CONFIG DRIVEN UI !! Imp for interviews
+Website Driven by data is known as CONFIG DRIVEN UI ! 
+
+STUDY CONFIG DRIVEN UIs ??
+
+Never Use index as key for props 
+
+unique id(best practice) >>>> index as key >>>> not using keys(its just not acceptable )
