@@ -1,0 +1,88 @@
+Why React ?? 
+everything in react can be done using html css and JS
+but Why only React ??
+
+React makes Developer Life easier !! 
+less code and more things on website 
+you would have to write thousands of lines of code for same thing but using html js css  
+
+in todays episode: 
+1. React hooks !! 
+
+best practice is to make seperate file for each component !!  in component folder
+
+NEVER PUT HARD CODED DATA IN component folder
+like strings for images and stuff dont put them in component files 
+common practice is keep it in sep file
+
+constants should be named in CAPS_SNAKECASE
+
+----------------PART 2--------------
+
+by attributes like onclick in html 
+onClick = {} for react 
+and onMouseOver = {} and all them in js 
+
+when we say react is Fast 
+it means React is fast in DOM manipulation 
+it is efficient in DOM manipulation 
+
+when we want to our UI layer and Data
+(We make UI based on data i.e. config driven UI)
+ layer consistent for each other 
+ it means if data changes UI should automatically change 
+ this is THE EXACT PROBLEM REACT IS TRYING TO SOLVE
+
+SUPER powerful var in React aka State Variable: 
+INtro to HOOKS: 
+React hooks are normal JS utility functions given to us by React. 
+only diff is that function comes with superpowers  
+i.e. some predefined logic behind them.. 
+
+we have to import these function / hooks 
+
+TWO IMP HOOKS
+1.useState()
+2.useEffect()
+
+1.useState()
+-used to create State Variable
+-State Variable maintains the state of the component
+
+The superpowerful Variable keeps the UI in sync with Data layer 
+UI will be automatically updated when data is changed
+
+Definition: 
+Whenever a state Variable changes react re-renders the component !!! 
+ 
+whenever a state Variables function i.e setStateVar is called state Variable will be updated anywhere 
+setStateVar fn is trigger to diffing Algorithm
+it is in the file structure and the component that is using that state Variable will also be re- renderd
+
+REACTS superpower is DOM manipulation it is very fast in it 
+
+IMP TOPICSSS: 
+React uses: 33
+1. Reconciliation Algorith 
+  -aka ReactFiber
+  -Everytime a state Variable is changed i.e. state is changed a new Virtual DOM is created 
+  -work of Reconciliation Algorithm is to find the diff between  old Virtual DOM and new Virtual DOM
+  - and make changes in the Actual DOM
+  - Notice one point it make changes it does not reload or make New DOM again 
+
+   
+
+2.Virtual DOM 
+  representation of Actual DOM 
+
+so HOW IS REACT FAST ??? 
+- React has Virtual DOM.. 
+  -but concept of Virtual DOM was known way before ... 
+  -but React devs built React core Algorithm around virtual DOM 
+  -Enabling react to do efficient dom manipulation !! 
+   react super fastly finds out diff bet old and new virtual dom and changes the Actual dom only those changes 
+
+
+question for later !! 
+state change ke baad virtual dom create hota hai kya us state variable ke liye ya uss component ke liye jisme state variable tha 
+
