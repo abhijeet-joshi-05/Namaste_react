@@ -1,0 +1,71 @@
+Monolith and Microservice architecture. 
+
+Monolith architecture: 
+Traditionally web apps were devlep. in Monolith architecture.
+
+Microservice architecture: 
+for modern web apps,
+aka seperation of concerns 
+and single responsibility principle 
+where each service has its own job 
+
+how do these service interact with each other ? UI to backend , backend to DB ?? 
+All these services are deployed .. 
+you can write Microservice in diff langs ! 
+they run on their own specific ports
+1234 - UI 
+1000 - backend
+all these ports can be mapped to domain 
+
+these service interact ..they make call to diff URL
+
+Now we will see How react App talk to diff Microservice 
+like how react will make backend API call . 
+
+How we can fetch dynamically API data 
+like how can we fetch API  or API call in react 
+
+Two approach how web apps fetch data from backend ! 
+1> when  as soon as page loads we can make a API call and render the data on the UI 
+page loads --> API call (500ms to return data) --> Render.
+
+2> page loads --> render UI --> API call () -->  re render with API data
+
+in React we will always use 2nd appraoch 
+React has one of the best Render cycles 
+
+IMP Topic 
+useEffect Hook 
+useEffect(()=>{},[]);
+the above argument arrow callback function will be called after components have rendered
+
+when the body component is rendered 
+it will call the useEffect's argument callback function 
+
+in simple words if you want to do something when the components have rendered you write it in a useEffect 
+
+if anyone reading this repo swiggy changed there api alot like crazy they added pagination systems and what not
+in Akshays video it was just returning plain output and not a single restaurant and stuff so i had to do lot of stuff to try doing something.. but..  still i failed !! i will try again 
+wasted like 1 hour i guess haha 
+there is something like offset i ll try that that 
+
+still using the mock data ! 
+
+imagine we are getting data from API now api call takes time 
+until that we can show loading screen ! 
+showing loading or spinner is a bad practice !
+
+INdustry practice is shimmer UI.. 
+we can show fake cards over here or fake page until our original data loads 
+or skeleteon until data shows up 
+this is good practice and much better user experience !! 
+ 
+so now the cycle is like 
+page loads --> render UI(shimmer) --> API call () -->  re render with API data
+
+rendering based on condition is called as 
+CONDITIONAL RENDERING
+
+when a setStateVar function is used .. the component is re rendered with new value of that state variable 
+
+when ever state variable updates , react triggers reconciliation cycle (re render the component that uses the same state variable )
